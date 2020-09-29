@@ -7,7 +7,56 @@
     <bean id="Person" class="firstSpring.Person">
         <property name="id" value="10"/>
         <property name="name" value="zoro"/>
+        <property name="emails">
+            <list>
+                <value>772354252@qq.com</value>
+                <value>772354253@qq.com</value>
+                <value>772354254@qq.com</value>
+            </list>
+        </property>
+
+        <property name="tels">
+            <set>
+                <value>13466</value>
+                <value>13463</value>
+                <value>134637</value>
+            </set>
+        </property>
+
+        <property name="address">
+            <list>
+                <value>112</value>
+                <value>113</value>
+                <value>112</value>
+            </list>
+        </property>
+        <property name="qqs">
+            <map>
+                <entry>
+                    <key><value>aaa</value></key>
+                    <value>134</value>
+                </entry>
+                <entry>
+                    <key><value>bbb</value></key>
+                    <value>1324</value>
+                </entry>
+            </map>
+        </property>
+
+        <property name="p">
+            <props>
+                <prop key="213">315</prop>
+                <prop key="245">3415</prop>
+            </props>
+        </property>
+<!--        <property name="car">-->
+<!--             <bean id="car" class="firstSpring.Car"/>-->
+<!--        </property>-->
+
+        <property name="car">
+            <ref bean="car"/>
+        </property>
     </bean>
         <!-- collaborators and configuration for this bean go here -->
-
+    <bean id="car"  class="firstSpring.Car"/>
 </beans>
